@@ -21,10 +21,7 @@ xray-env/
 .ipynb_checkpoints
 *.ipynb_checkpoints/
 
-# PyTorch/Training artifacts
-*.pth
-*.pt
-*.ckpt
+# PyTorch/Training artifacts (exclude training checkpoints but keep best models)
 logs/
 runs/
 wandb/

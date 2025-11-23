@@ -47,10 +47,6 @@ Thumbs.db
 # Gradio temporary files
 flagged/
 
-# Model checkpoints (keep only best models, exclude epoch checkpoints)
-models/*_epoch_*.pth
-models/*/epoch_*.pth
-
 # Keep models directory structure but ignore large files
 # Uncomment below if you want to exclude ALL models
 # models/*.pth

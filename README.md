@@ -21,7 +21,7 @@ A production-ready deep learning system for classifying chest X-ray images into 
 **Want to test the model immediately? Follow these steps:**
 
 ### Prerequisites
-- Python 3.10+
+- Python 3.9+
 - 4GB+ RAM
 - GPU (optional, but recommended)
 
@@ -33,8 +33,8 @@ git clone <repository-url>
 cd X-Ray
 
 # 2. Create conda environment
-conda create -n xray-ml python=3.10 -y
-conda activate xray-ml
+conda create -n ml python=3.9 -y
+conda activate ml
 
 # 3. Install dependencies
 # For GPU (CUDA 12.4)

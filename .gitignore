@@ -1,0 +1,58 @@
+# Dataset folders (download separately from Kaggle)
+data/
+data_clean/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+xray-env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# PyTorch/Training artifacts
+*.pth
+*.pt
+*.ckpt
+logs/
+runs/
+wandb/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Reports (optional - uncomment if you want to exclude)
+# reports/
+
+# Gradio temporary files
+flagged/
+
+# Model checkpoints (keep only best models, exclude epoch checkpoints)
+models/*_epoch_*.pth
+models/*/epoch_*.pth
+
+# Keep models directory structure but ignore large files
+# Uncomment below if you want to exclude ALL models
+# models/*.pth
+# models/*.pt
+

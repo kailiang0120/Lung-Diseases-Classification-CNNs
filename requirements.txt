@@ -1,0 +1,36 @@
+--extra-index-url https://download.pytorch.org/whl/cu124
+
+# Core PyTorch for vision (CUDA 12.4 wheels)
+torch==2.4.1+cu124
+torchvision==0.19.1+cu124
+torchaudio==2.4.1+cu124
+
+# Numerics and image I/O/processing
+numpy
+pillow>=10.3.0
+opencv-python>=4.9.0
+imagehash
+
+# Augmentations
+albumentations
+
+# Training utilities and logging
+tqdm
+tensorboard
+torchmetrics
+
+# Common model zoo for vision
+timm
+huggingface_hub==0.23.0
+
+# Metrics/ML utils and visualization
+scikit-learn
+matplotlib
+
+# Configs
+pyyaml
+
+# UI / App
+gradio==4.44.1
+gradio_client==1.3.0
+pydantic==2.10.6

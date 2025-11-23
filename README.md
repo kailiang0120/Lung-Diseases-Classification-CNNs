@@ -85,10 +85,10 @@ This system uses state-of-the-art deep learning (EfficientNetV2-S) to analyze ch
 #### Step 1: Create Environment
 ```bash
 # Create new conda environment
-conda create -n xray-ml python=3.10 -y
+conda create -n ml python=3.9 -y
 
 # Activate environment
-conda activate xray-ml
+conda activate ml
 ```
 
 #### Step 2: Install PyTorch
@@ -164,7 +164,7 @@ pip install -r requirements.txt
 
 ```bash
 # Activate your environment
-conda activate xray-ml  # or: source xray-env/bin/activate
+conda activate ml  # or: source xray-env/bin/activate
 
 # Run the inference UI
 python app/inference_ui.py
@@ -406,7 +406,7 @@ python scripts/train.py --config configs/training_config.yaml --cpu
 
 **Solution:** Reinstall dependencies
 ```bash
-conda activate xray-ml
+conda activate ml
 pip install --upgrade -r requirements.txt
 ```
 
@@ -453,14 +453,14 @@ ls models/efficientnetv2s_best.pth
 # configs/training_config.yaml
 data_module:
   pin_memory: true      # Faster GPU transfer
-  num_workers: 4        # Parallel data loading
+  num_workers: 4        
 ```
 
 **CPU Optimization:**
 ```yaml
 data_module:
   pin_memory: false
-  num_workers: 2        # Reduce for CPU
+  num_workers: 2        # Reduce for CPU (Free colab only have 2 cpus)
 ```
 
 ### Getting Help
@@ -477,8 +477,8 @@ data_module:
 
 | Model | Accuracy | Inference Speed (GPU) | Size |
 |-------|----------|----------------------|------|
-| EfficientNetV2-S | ~92% | ~50ms/image | 82MB |
-| DenseNet121 | ~90% | ~40ms/image | 31MB |
+| EfficientNetV2-S | ~95% | ~50ms/image | 240MB |
+| DenseNet121 | ~90% | ~40ms/image | 80MB |
 
 *Tested on NVIDIA RTX 3060, batch size 1*
 
@@ -502,34 +502,13 @@ Please cite the original dataset authors if you use this in research.
 ### Code
 This project is for educational and research purposes. For medical applications, always consult qualified healthcare professionals.
 
----
-
-## 🤝 Contributing
-
-Contributions welcome! Areas for improvement:
-- Additional model architectures
-- Multi-GPU training support
-- REST API for inference
-- Docker containerization
-- Model quantization for mobile deployment
-
----
-
-## 📧 Support
-
-For issues or questions:
-1. Check [Troubleshooting](#-troubleshooting) section
-2. Review training logs in `logs/`
-3. Verify environment with `pip list`
-
----
 
 **Quick Commands Reference:**
 
 ```bash
 # Setup
-conda create -n xray-ml python=3.10 -y
-conda activate xray-ml
+conda create -n ml python=3.10 -y
+conda activate ml
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
 pip install -r requirements.txt
 

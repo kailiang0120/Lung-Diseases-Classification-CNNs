@@ -27,7 +27,7 @@ pip install -r requirements.txt --no-deps
 python -m venv .venv
 .\.venv\Scripts\activate
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
-pip install -r requirements.txt --no-deps
+pip install -r requirements.txt
 ```
 
 4. Launch the UI:

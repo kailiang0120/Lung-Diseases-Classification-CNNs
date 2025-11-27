@@ -18,7 +18,7 @@ Classifies chest X-ray images as normal, pneumonia, or tuberculosis. Ships with 
 python -m venv .venv
 .\.venv\Scripts\activate
 pip install torch==2.4.1+cu124 torchvision==0.19.1+cu124 torchaudio==2.4.1+cu124 --index-url https://download.pytorch.org/whl/cu124
-pip install -r requirements.txt --no-deps
+pip install -r requirements.txt
 ```
 
 ### Option B: CPU only
